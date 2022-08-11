@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Go Verify",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl"> Give consent to storing your documents
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+<p>On the next page we will ask you to upload your documents. </p>
+  <p>Uploading your documents with this service allows you to quickly apply for council services and means you will only need to provide document evidence once.</p>
+
+<p>This will allow you to quickly and easily apply for the council  services you need, without having to provide these documents separately for each service. All data will be securely held in accordance with GDPR regulations. You can read our security and GDPR procedures here.</p>
+
+<p> If you would prefer not to upload your documents, you can skip this step. You will be asked to provide your documents by each service you apply for.</p>
+
+  <p> You can upload the following documents:
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Passport</li>
+      <li>Driving Licence</li>
+      <li>Proof of address</li>
+    </ul>
+
+<p>You can find a list of council services and the documents they require here.</p>
+
+ 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you agree and are you happy to proceed?
+      </h1>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      Fictional City Council will store my personal information and documents for 5 years.
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+        
+      </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+       
+        </legend>
+        <div id="changed-name-hint" class="govuk-hint">
+          Fictional City council will use my data to support my applications to council services. 
+        </div>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+            
+          </div>
+        </div>
+
+
+
+  </fieldset>
+</div>
+    </div>
+    <div></div>
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Cotinue to upload
+      </button>
+    
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Skip upload and sign out
+      </button>
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+
+
+{% endblock %}
+
+

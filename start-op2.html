@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Go Verify",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl"> Welcome to The Fictional City Council Go Verify portal.
+        {% if serviceName %} {{ serviceName }} {% endif %}
+  
+
+      </h1>
+
+      <p>This area allows you to upload documents so that you can apply for council services quickly. Your data is held under GDPR legislation.</p>
+
+      <h3 class="govuk-heading-s">Within this portal you can</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li>provide your personal details (name, email address etc) </li>
+  <li>upload your proof of eligibility documents</li>
+
+</ul>
+
+<h3 class="govuk-heading-s">The types of documents you can upload include</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Passport </li>
+  <li>Driving Licence</li>
+  <li>Birth Certificates </li>
+  <li>Marriage and Civil Partnership certificates</li>
+  <li>Benefits eligibility letters </li>
+  <li>Utility bills</li>
+  <li>Council tax bill</li>
+</ul>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Giving your consent
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    The portal will ask you to give your consent to the following actions:
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the storage of your documents on secure council web servers.</li>
+      <li>access to your documents by authorised members of council staff </li>
+    </ul>
+  </div>
+</details>
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If you can't upload documents
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    It's quicker to upload your documents online. If you're unable to do this, you have several options:
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Visit your <a class="govuk-link" href="">local council office</a>. Our trained and vetted staff will help you to upload your documents.
+        Find out more about <a class="govuk-link" href="">supported upload service</a>.</li>
+      <li>You can email your documents to  <a class="govuk-link" href="">admin@fictionalcitycouncil.gov.uk</a>. 
+        If you emailed your documents, you will receive an automatic acknowledgement email.
+         If you did not receive an email, check your junk folder.</li>
+    </ul>
+  </div>
+</details>
+
+<p> <a class= "govuk-link" href="further-information-link.html">Further information about the security of your stored documents (Privacy Notice)</a> </p>
+ 
+
+  <p> You can still apply for council services via this portal if you choose not to provide your documents.</p>
+
+  
+
+
+
+
+
+      <p>If you already have a GoVerify account please sign in below. Otherwise, you can create an account.</p>
+
+
+
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Sign In
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+      <a href="personal-details" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Create an account
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+        
+      </a>
+
+      
+    </div>
+
+   
+   
+  </div>
+{% endblock %}
