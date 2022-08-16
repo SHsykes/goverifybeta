@@ -28,55 +28,61 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl"> Give consent to storing your documents
+    <h1 class="govuk-heading-xl"> Upload and store your documents
       {% if serviceName %} {{ serviceName }} {% endif %}
     </h1>
 
-<p>On the next page we will ask you to upload your documents. </p>
-  <p>Uploading your documents with this service allows you to quickly apply for council services and means you will only need to provide document evidence once.</p>
+    <div class="govuk-inset-text">
+      You can skip this step if you do not want us to keep your documents on file. 
+      You will need to upload the documents for each application.
+    </div>
+    
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+     Skip this step
+    </button>
+ 
+    <p>   
 
-<p>This will allow you to quickly and easily apply for the council  services you need, without having to provide these documents separately for each service. All data will be securely held in accordance with GDPR regulations. You can read our security and GDPR procedures here.</p>
-
-<p> If you would prefer not to upload your documents, you can skip this step. You will be asked to provide your documents by each service you apply for.</p>
-
+    </p>
   <p> You can upload the following documents:
-
     <ul class="govuk-list govuk-list--bullet">
-      <li>Passport</li>
-      <li>Driving Licence</li>
-      <li>Proof of address</li>
+      <li>passport</li>
+      <li>driving licence</li>
+      <li>birth certificate</li>
+      <li>marriage and civil partnership certificates</li>
+      <li>benefits eligibility letters</li>
+      <li>utility bills</li>
+      <li>council tax bills</li>
     </ul>
 
-<p>You can find a list of council services and the documents they require here.</p>
+<p>See our <a class="govuk-link" href="">list of council services and the documents they need.</a></p>
 
  
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          Give your consent to store your documents
+          Consent statement
         </h1>
       </legend>
-      <div id="waste-hint" class="govuk-hint">
-        If you do not agree you will not be able to upload documents at this time.
-      </div>
+     
 
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
         <label class="govuk-label govuk-checkboxes__label" for="waste">
-          I understand and agree that my documents will be stored by Fictional City Council.
+          I understand and agree that Fictional City Council will store my personal information and documents for up to 5 years, 
+          and that they will use my data to support my applications to services. 
         </label>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          I understand and agree that my documents may be used for any council services I apply for.
-        </label>
-      </div>
+  
      
     </div>
     <div></div>
+
+    <p>   
+      
+    </p>
 
     <div class="govuk-button-group">
       <button class="govuk-button" data-module="govuk-button">
